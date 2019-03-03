@@ -1,0 +1,90 @@
+
+public class ColecaoPessoa implements Colecao {
+
+	private static ColecaoPessoa singleton;
+	private Pessoa[] dados = new Pessoa[100];
+	private int posicaoCorrente;
+
+	static ColecaoPessoa getInstance() {
+		if (singleton == null)
+			singleton = new ColecaoPessoa();
+
+		return singleton;
+	}
+
+	@Override
+	public boolean inserir(Pessoa p) {
+		if (posicaoCorrente > 99) {
+			return false;
+		}
+		dados[posicaoCorrente] = p;
+		posicaoCorrente++;
+
+		return true;
+	}
+
+	@Override
+	public boolean remover(Pessoa p) {
+		for (int i = 0; i < posicaoCorrente; i++) {
+			if (p.equals(dados[i])) {
+				for (int j = i; j < posicaoCorrente - 1; j++) {
+					dados[j] = dados[j + 1];
+				}
+				posicaoCorrente--;
+				break;
+			}
+		}
+		return false;
+	}
+
+	@Override
+	public boolean remover(int posicaoCorrente) {
+		for (int i = 0; i < posicaoCorrente; i++) {
+			if (posicaoCorrente.equals(dados[i])){
+				for (int j = i; j < posicaoCorrente - 1; j++) {
+					dados[j] = dados[j + 1];
+				}
+				posicaoCorrente--;
+				break;
+				
+			}
+		}
+
+		return false;
+	}
+
+	@Override
+	public void atualizar(int posicaoCorrente, Pessoa p) {
+
+		dados[posicaoCorrente] = p;
+
+	}
+
+	@Override
+	public boolean pesquisar(Pessoa p) {
+
+		if (p == dados[posicaoCorrente]) {
+			return true;
+		}
+
+		return false;
+	}
+
+	@Override
+	public boolean colecaoVazia() {
+
+		if (posicaoCorrente == 0) {
+			return true;
+		}
+
+		return false;
+	}
+
+	@Override
+	public void imprimirDadosColecao() {
+
+		System.out.println();
+
+	}
+
+}

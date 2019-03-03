@@ -1,0 +1,8 @@
+
+public class ColecaoPessoa implements Colecao {
+
+	Pessoa[] dados = new Pessoa[100];
+	int posicaoCorrente;
+
+	
+}

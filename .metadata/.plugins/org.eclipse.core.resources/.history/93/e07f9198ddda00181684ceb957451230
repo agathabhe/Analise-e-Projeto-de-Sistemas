@@ -1,0 +1,12 @@
+
+public class CupomFiscal {
+
+	private String nomeLoja;
+	private String cnpj;
+	private String cpfConsumidor;
+	private String cnpjConsumidor;
+	private double dinheiroRecebido;
+	private Item[] listaItem;;
+	
+	
+}

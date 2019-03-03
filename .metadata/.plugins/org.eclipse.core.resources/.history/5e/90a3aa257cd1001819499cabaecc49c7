@@ -1,0 +1,52 @@
+
+public class ColecaoPessoa implements Colecao {
+
+	private static ColecaoPessoa singleton;
+	private Pessoa[] dados = new Pessoa[100];
+	private int posicaoCorrente;
+	
+	
+	static ColecaoPessoa getInstance() {
+		 if (singleton == null)
+	            singleton = new ColecaoPessoa();
+	 
+	        return singleton;
+	}
+	
+	@Override
+	public boolean inserir(Pessoa p) {
+		
+		return false;
+	}
+	@Override
+	public boolean remover(Pessoa p) {
+		
+		return false;
+	}
+	@Override
+	public boolean remover(int posicaoCorrente) {
+		
+		return false;
+	}
+	@Override
+	public void atualizar(int posicaoCorrente, Pessoa p) {
+		
+	}
+	@Override
+	public boolean pesquisar(Pessoa p) {
+		
+		return false;
+	}
+	@Override
+	public boolean colecaoVazia() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	@Override
+	public void imprimirDadosColecao() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+}

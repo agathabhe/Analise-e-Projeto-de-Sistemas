@@ -1,0 +1,23 @@
+
+public class App {
+
+	public static void main(String[] args) {
+		
+		Impressora teste = Impressora.getInstance();
+		CupomFiscal meucupom = new CupomFiscal.CupomFiscalBuilder("Amazon", "328399889007")
+				.cpfConsumidor("98328372932")
+				.dinheiroRecebido(800)
+				.build();
+		Item item1 = new Item(1, "Sabonete", 2, 2);
+		Item item2 = new Item(2, "Sabão", 3, 2);
+		Item item3 = new Item(3, "Toalha", 10, 2);
+		Item item4 = new Item(4, "Shampoo", 12, 2);
+		Item item5 = new Item(5, "Creme", 13, 2);
+		
+		meucupom.getListaItem()[0] = item1;
+		
+		
+
+	}
+
+}

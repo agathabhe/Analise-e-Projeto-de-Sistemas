@@ -1,0 +1,51 @@
+import java.util.Calendar;
+
+public class Impressora {
+
+	private static Impressora singleton;
+	
+	private Impressora (){
+		
+	}
+	
+	static Impressora getInstance() {
+		if (singleton == null)
+			singleton = new Impressora();
+
+		return singleton;
+	}
+	
+	public void imprimirNota(CupomFiscal c) {
+		Calendar data = Calendar.getInstance();
+		String cupom = "";
+		cupom += "\t" + c.getNomeLoja() + "\n";
+		cupom += "\tCNPJ: " + c.getCnpj() + "\n";
+		cupom += "\t" + data.get(Calendar.DAY_OF_MONTH) + "/" + (data.get(Calendar.MONTH) + 1) + "/"
+				+ data.get(Calendar.YEAR) + " " + data.get(Calendar.HOUR_OF_DAY) + ":" + data.get(Calendar.MINUTE) + ":"
+				+ data.get(Calendar.SECOND) + "\n";
+		cupom += "----------------------------------------" + "\n";
+		if (c.getCpfConsumidor() != null) {
+			cupom += "CNPJ/CPF consumidor: " + c.getCpfConsumidor() + "\n";
+		} else
+			cupom += "CNPJ/CPF consumidor: " + c.getCnpjConsumidor() + "\n";
+		cupom += "----------------------------------------" + "\n";
+		cupom += "         CUPOM FISCAL" + "\n";
+		cupom += "\nITEM" + "        CODIGO         DESCRIÇÂO" + "\n          QTDxUNITARIO        VALOR(R$)" + "\n";
+		cupom += "========================================" + "\n";
+		int i;
+		Item it = new Item();
+		for (i = 0; i < c.getListaItem().size(); i++) {
+			cupom += "" + (i + 1) + "                " + c.listaItem.get(i).getNome() + "\n                 " + ""
+					+ c.getListaItem().get(i).getQtddVendida() + "x" + c.getListaItem().get(i).getValorUnitario()
+					+ "                           " + it.calculoValorTotal(c.getListaItem().get(i)) + "\n";
+		}
+		cupom += "TOTAL R$                                     " + c.calculoValorTotal()(c.getListaItem()) + "\n";
+		System.out.println(c.calculoValorTotal());
+		cupom += "----------------------------------------\n\n" + "\n";
+		return cupom;
+	}
+	public void imprimirNota(CupomFiscal c[]) {
+		
+	}
+	
+}

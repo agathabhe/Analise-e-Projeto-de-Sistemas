@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.sql.Date"/>
+<fullyQualifiedTypeName name="java.lang.Override"/>
+<fullyQualifiedTypeName name="MensagemLogon"/>
+<fullyQualifiedTypeName name="MensagemLogout"/>
+<fullyQualifiedTypeName name="FabricaAbstrata"/>
+<fullyQualifiedTypeName name="FabricaBradesco"/>
+<fullyQualifiedTypeName name="FabricaItau"/>
+<fullyQualifiedTypeName name="MensagemLogonBradesco"/>
+<fullyQualifiedTypeName name="javax.swing.JButton"/>
+<fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
+<fullyQualifiedTypeName name="javax.swing.JTextField"/>
+<fullyQualifiedTypeName name="javax.swing.JPasswordField"/>
+<fullyQualifiedTypeName name="javax.swing.JLabel"/>
+<fullyQualifiedTypeName name="MensagemLogonItau"/>
+<fullyQualifiedTypeName name="MensagemLogoutItau"/>
+<fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+<fullyQualifiedTypeName name="OperacaoMatematica"/>
+<fullyQualifiedTypeName name="Multiplicacao"/>
+<fullyQualifiedTypeName name="Adicao"/>
+<fullyQualifiedTypeName name="Abstracao"/>
+<fullyQualifiedTypeName name="q2.SisFacade"/>
+<fullyQualifiedTypeName name="java.util.Set"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="principal.PessoaJuridica"/>
+<fullyQualifiedTypeName name="principal.PessoaEstrangeira"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="java.awt.event.FocusEvent"/>
+<fullyQualifiedTypeName name="principal.FormaPagamento"/>
+<fullyQualifiedTypeName name="principal.PedidoBDProxy"/>
+<fullyQualifiedTypeName name="principal.PedidoBD"/>
+<fullyQualifiedTypeName name="principal.IteradorPedidos"/>
+<fullyQualifiedTypeName name="principal.Cliente"/>
+<fullyQualifiedTypeName name="principal.Item"/>
+<fullyQualifiedTypeName name="principal.Software"/>
+<fullyQualifiedTypeName name="principal.Pedido"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+</qualifiedTypeNameHistroy>

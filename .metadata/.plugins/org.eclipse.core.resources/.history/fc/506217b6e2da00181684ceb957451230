@@ -1,0 +1,23 @@
+
+public class Impressora {
+
+	private static Impressora singleton;
+	
+	private Impressora (){
+		
+	}
+	
+	static Impressora getInstance() {
+		if (singleton == null)
+			singleton = new Impressora();
+
+		return singleton;
+	}
+	
+	public void imprimirNota(CupomFiscal c) {
+	}
+	public void imprimirNota(CupomFiscal c[]) {
+		
+	}
+	
+}

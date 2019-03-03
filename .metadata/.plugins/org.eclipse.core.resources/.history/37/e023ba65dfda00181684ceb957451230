@@ -1,0 +1,31 @@
+
+public class CupomFiscal {
+
+	private String nomeLoja;
+	private String cnpj;
+	private String cpfConsumidor;
+	private String cnpjConsumidor;
+	private double dinheiroRecebido;
+	private Item[] listaItem;
+	
+	public static class CupomFiscalBuilder{
+		
+		private String nomeLoja;
+		private String cnpj;
+		private String cpfConsumidor;
+		private String cnpjConsumidor;
+		private double dinheiroRecebido;
+		private Item[] listaItem;
+		
+		public CupomFiscalBuilder cpfConsumidor(String cpfConsumidor)
+        {
+            this.cpfConsummidor = cpfConsummidor;
+            return this;
+        }
+		
+		
+	}	
+	
+	
+	
+}

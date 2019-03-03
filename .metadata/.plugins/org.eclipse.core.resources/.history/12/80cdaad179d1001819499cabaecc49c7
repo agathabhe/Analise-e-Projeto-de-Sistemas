@@ -1,0 +1,63 @@
+import java.util.Date;
+
+public class PessoaJuridica extends Pessoa{
+	
+	String cnpj;
+	Date dataCriacao;
+	
+	public PessoaJuridica(String cnpj) throws DocumentoInvalidoException {
+		super();
+		this.cnpj = cnpj;
+		if (!validarDocumento()) {
+			throw new DocumentoInvalidoException();
+		}
+
+	}
+	
+	public String getCnpj() {
+		return cnpj;
+	}
+	public void setCnpj(String cnpj) {
+		this.cnpj = cnpj;
+	}
+	public Date getDataCriacao() {
+		return dataCriacao;
+	}
+	public void setDataCriacao(Date dataCriacao) {
+		this.dataCriacao = dataCriacao;
+	}
+	
+	@Override
+	public String toString() {
+		
+		return "Nome"+nome+"CNPJ"+cnpj+"Data de Criação"+dataCriacao;
+		
+	}
+	
+	@Override
+	public boolean equals(Object o){
+		if(o instanceof PessoaJuridica){
+			PessoaJuridica p = (PessoaJuridica)o;
+			return this.nome.equals(p.nome);
+		}
+		return false;
+	}
+	
+	public boolean validarDocumento() {
+		if (getCnpj().length() != 18) {
+			return false;
+		}
+		return true;
+	}
+
+	@Override
+	int calcularIdade() {
+		Date data = new Date();
+		int idade = (data.getYear()+1900)-(getDataCriacao().getYear()+1900);
+		
+		return idade
+	}
+	
+	
+
+}
